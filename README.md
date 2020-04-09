@@ -19,7 +19,7 @@ With my simple application, administrators will be able to:
 	* Create/view/update invoices sent to patients
 	* View/Update Payments recorded by Receptionist
 
-![Use Case Diagram](link-to-image)
+![Use Case Diagram](https://github.com/kayshale/FinalProject/blob/master/FinalProject%20Use%20Cases.png)
 
 # Assumptions
 * A patient/provider/claim/invoice needs to be created by its respective administrator before anything can be done
@@ -47,3 +47,5 @@ With my simple application, administrators will be able to:
 * Unpaid Invoices will be added to the most recent invoice sent to the patient
 	* Invoices will also show credits (previous payments)
 * All admins need a username and password in the database to verify themselves
+
+![Relational Schema](https://github.com/kayshale/FinalProject/blob/master/Schema.png)
