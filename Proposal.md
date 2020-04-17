@@ -8,16 +8,13 @@ Originally, these records were being kept in paper files and in a silo system wh
 
 # Use Case
 With my simple application, administrators will be able to:
-* Receptionists
-	* Create/view/update/delete Patient profiles
-	* Record payments made towards an invoice
-		* This record will then need to be confirmed and applied to the invoice by the Billing Admin
-* HR Admin
-	* Create/view/update/delete Provider files
-* Billing Admin
-	* Create/view/update claims
-	* Create/view/update invoices sent to patients
-	* View/Update Payments recorded by Receptionist
+* Create/view/update/delete Patient profiles
+* Record payments made towards an invoice
+	* This record will then need to be confirmed and applied to the invoice by the Billing Admin
+* Create/view/update/delete Provider files
+* Create/view/update claims
+* Create/view/update invoices sent to patients
+* View/Update Payments recorded by Receptionist
 
 ![Use Case Diagram](https://github.com/kayshale/FinalProject/blob/master/FinalProject%20Use%20Cases.png)
 
