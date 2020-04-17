@@ -9,11 +9,11 @@ Originally, these records were being kept in paper files and in a silo system wh
 # Use Case
 With my simple application, administrators will be able to:
 * Receptionists
-	* Create/view/update Patient profiles
+	* Create/view/update/delete Patient profiles
 	* Record payments made towards an invoice
 		* This record will then need to be confirmed and applied to the invoice by the Billing Admin
 * HR Admin
-	* Create/view/update Provider files
+	* Create/view/update/delete Provider files
 * Billing Admin
 	* Create/view/update claims
 	* Create/view/update invoices sent to patients
@@ -22,7 +22,7 @@ With my simple application, administrators will be able to:
 ![Use Case Diagram](https://github.com/kayshale/FinalProject/blob/master/FinalProject%20Use%20Cases.png)
 
 # Assumptions
-* A patient/provider/claim/invoice needs to be created by its respective administrator before anything can be done
+* A patient/provider/claim/invoice needs to be created before anything can be done
 * Each Admin has unique login credential
 * When the receptionist records payments, it is not automatically applied to the account/invoice
  	* The Billing Admin needs to verify the payment and then credit the invoice
@@ -32,20 +32,10 @@ With my simple application, administrators will be able to:
 * Provider Specialty is not required to submit claims
 * Terminated Providers are removed from the database to avoid accidentally populating claims incorrectly
 * When Invoices are paid in full, the Billing Admin changes status from “Open” to “Close”
-* There may be several InsuranceID’s for the same Provider but never for the same Provider and Policy Type 
-	* Ex. 
-		* 00000001 | Blue Cross Blue Shield | Basic 
-		* 00000011 | Blue Cross Blue Shield | Family Plan
-* Each Insurance has a designated Service Rep for issues regarding claims and patient coverage
 * Patients may only have one (1) PCP at a time 
-* For each Co-Payment Recorded, there is an AdminID indicating who initiated the action
-* For each claim submitted, there is an AdminID indicating who initiated the action
-* For each invoice created, there is an AdminID indicating who initiated the action
 * Providers may see several patients 
 * Patients may have several invoices
-* Invoices must only have one patient, Descriptions help the patient understand which visit the co-pay is for (in case of several lines)
-* Unpaid Invoices will be added to the most recent invoice sent to the patient
-	* Invoices will also show credits (previous payments)
-* All admins need a username and password in the database to verify themselves
+* Each invoice must only have one patient, Descriptions help the patient understand which visit the co-pay is for (in case of several lines)
+* All admins need a username and password in the database to log in
 
 ![Relational Schema](https://github.com/kayshale/FinalProject/blob/master/Schema.png)
