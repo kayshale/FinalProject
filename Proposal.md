@@ -23,7 +23,7 @@ Patients will be able to"
 * View their medical bill
 * View and update their patient profile
 
-![Use Case Diagram](https://github.com/kayshale/FinalProject/blob/master/FinalProject%20Use%20Cases.png)
+![Use Case Diagram](https://github.com/kayshale/FinalProject/blob/master/UseCases.png)
 
 # Assumptions
 * A patient/provider/claim/invoice needs to be created before anything can be done
