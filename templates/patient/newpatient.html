@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>New Patient</h1>
+	{% if msg %}
+      <div id="errormsg">
+	  {% for err in msg %}
+		{{ err }}<br>
+	  {% endfor %}
+	  </div>
+    {% endif %}
+
+		<form action="/newpatient" method="POST">
+      Insurance Membership ID:<br>
+      <input type="text" name="PatientID"  /><br><br>
+
+      DOB:<br>
+      <input type="date" name="DOB"  /><br><br>
+
+      First Name:<br>
+      <input type="text" name="fname" /><br><br>
+
+      Last Name:<br>
+      <input type="text" name="lname"  /><br><br>
+
+      SSN:<br>
+      <input type="number" name="SSN"  /><br><br>
+
+      Notes:<br>
+      <input type="text" name="Notes" /><br><br>
+
+
+      PCPID:<br>
+      <select name="PCPID">
+        {% for provider in prl %}
+          <option value="{{ provider.PCPID }}">{{ provider.Name }} </option>
+        {% endfor %}
+      </select><br><br>
+
+			<br>
+
+			<input type="submit" value="Save Patient"/>
+
+		</form>
+{% endblock %}

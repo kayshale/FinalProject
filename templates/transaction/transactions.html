@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Transactions</h1>
+		<a href="newtransaction">Record New Transaction</a>
+		<table>
+		<tr>
+			<td>TransactionID</td>
+			<td>Date</td>
+			<td>Amount</td>
+      <td>Status</td>
+      <td>Insurance</td>
+      <td>Notes</td>
+      <td>PatientID</td>
+      <td>PCPID</td>
+		</tr>
+    {% for transaction in transactions %}
+  		<tr>
+  			<td><a href="transaction?TransactionID={{ transaction.TransactionID }}">{{ transaction.TransactionID}}</a></td>
+  			<td>{{ transaction.Date }}</td>
+  			<td>{{ transaction.Amount }}</td>
+        <td>{{ transaction.Status }}</td>
+        <td>{{ transaction.Insurance }}</td>
+        <td>{{ transaction.Notes }}</td>
+        <td>{{ transaction.PatientID}}</td>
+        <td>{{ transaction.PCPID }}</td>
+  		</tr>
+    {% endfor %}
+	</table>
+{% endblock %}

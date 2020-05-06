@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Provider</h1>
+	<form action="/saveprovider" method="POST">
+		Medical License Number (####):<br>
+		<input type="text" name="PCPID" value="{{ Provider.PCPID }}" /><br><br>
+
+		Date of Hire (2020-06-05):<br>
+		<input type="date" name="DOH" value="{{ Provider.DOH }}" /><br><br>
+
+		Name (Dr. First Last, MD):<br>
+		<input type="text" name="Name" value="{{ Provider.Name}}" /><br><br>
+
+    SSN (#########):<br>
+		<input type="text" name="SSN" value="{{ Provider.SSN }}" /><br><br>
+
+    Specialty:<br>
+		<input type="text" name="Specialty" value="{{  Provider.Speacialty }}" /><br><br>
+
+		<br>
+
+		<input type="submit" value="Save New Provider"/>
+
+		</form>
+{% endblock %}

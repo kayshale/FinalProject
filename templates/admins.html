@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Admin List</h1>
+		<table>
+		<tr>
+			<td>AdminID</td>
+			<td>First Name</td>
+			<td>Last Name</td>
+      <td>Title</td>
+      <td>Contact</td>
+		</tr>
+    {% for admin in admins %}
+  		<tr>
+  			<td><a href="admin?AdminID={{ admin.AdminID }}">{{ admin.AdminID }}</a></td>
+  			<td>{{ admin.fname }}</td>
+  			<td>{{ admin.lname }}</td>
+        <td>{{ admin.title}}</td>
+        <td>{{ admin.contact }}</td>
+  		</tr>
+    {% endfor %}
+	</table>
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Patient</h1>
+	<form action="/savepatient" method="POST">
+		Insurance Membership ID:<br>
+		<input type="text" name="PatientID" value="{{ Patient.PatientID }}" /><br><br>
+
+	  DOB:<br>
+		<input type="date" name="DOB" value="{{ Patient.DOB }}" /><br><br>
+
+		First Name:<br>
+		<input type="text" name="fname" value="{{ Patient.fname }}" /><br><br>
+
+    Last Name:<br>
+		<input type="text" name="lname" value="{{ Patient.lname }}" /><br><br>
+
+    SSN:<br>
+    <input type="number" name="SSN" value="{{ Patient.SSN }}" /><br><br>
+
+    Notes:<br>
+		<input type="text" name="Notes" value="{{ Patient.Notes }}" /><br><br>
+
+    PCPID:<br>
+		<input type="text" name="PCPID" value="{{ Patient.PCPID }}" /><br><br>
+
+		<br>
+
+		<input type="submit" value="Save New Patient"/>
+
+		</form>
+{% endblock %}

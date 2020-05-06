@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Main menu</h1>
+	{% if msg %}
+      <div id="menumsg">
+		{{ msg }}
+	  </div>
+    {% endif %}
+	<br><br>
+	<a href="transactions">View Transaction List</a><br> <!-- redirect to patient roster, open to changing patient info -->
+	<a href="newtransaction">Create New Transaction</a><br> <!-- redirect to blank transaction form to submit  -->
+  <a href="providers">View List of Providers</a><br> <!-- redirect to provider roster to add/remove providers  -->
+  <a href="newprovider">Create New Provider Profile</a><br> <!-- redirect to blank transaction form to submit  -->
+  <a href="patients">View Patient Roster</a><br> <!-- redirect to provider roster to add/remove providers  -->
+  <a href="newpatient">Create New Patient Profile</a><br> <!-- redirect to blank transaction form to submit  -->
+  <a href="admins">Contact App Admin with Questions</a><br> <!-- redirect to provider roster to add/remove providers  -->
+
+{% endblock %}

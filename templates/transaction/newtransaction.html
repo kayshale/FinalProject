@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>New Transaction</h1>
+	{% if msg %}
+      <div id="errormsg">
+	  {% for err in msg %}
+		{{ err }}<br>
+	  {% endfor %}
+	  </div>
+    {% endif %}
+
+		<form action="/newtransaction" method="POST">
+      Transaction ID:<br>
+      <input type="text" name="TransactionID" /><br><br>
+
+      Date (2020-06-05):<br>
+      <input type="date" name="Date"  /><br><br>
+
+      Amount (100.00):<br>
+      <input type="text" name="Amount"  /><br><br>
+
+      Insurance:<br>
+      <input type="text" name="Insurance" /><br><br>
+
+      Notes:<br>
+      <textarea name="Notes"></textarea><br><br>
+
+      Status:<br>
+      <select name="Status">
+        <option value="Open">Open</option>
+        <option value="Closed">Closed</option>
+      </select><br><br>
+
+      AdminID:<br>
+      <select name="AdminID">
+        {% for admin in al %}
+          <option value="{{ admin.AdminID }}">{{ admin.fname }} {{ admin.lname }} - {{ admin.title }}  </option>
+        {% endfor %}
+      </select><br><br>
+
+      PatientID:<br>
+      <select name="PatientID">
+        {% for patient in pl %}
+          <option value="{{ patient.PatientID }}">{{ patient.fname }} {{ patient.lname }}</option>
+        {% endfor %}
+      </select><br><br>
+
+      PCPID:<br>
+      <select name="PCPID">
+        {% for provider in prl %}
+          <option value="{{ provider.PCPID }}">{{ provider.Name }} </option>
+        {% endfor %}
+      </select><br><br>
+
+			<br>
+
+			<input type="submit" value="Save Transaction"/>
+
+		</form>
+{% endblock %}

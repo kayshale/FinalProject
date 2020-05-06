@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>List of Providers</h1>
+		<a href="newprovider">Add New Provider Profile</a>
+		<table>
+		<tr>
+			<td>PCPID</td>
+			<td>DOH</td>
+			<td>Name</td>
+      <td>SSN</td>
+      <td>Speacialty</td>
+		</tr>
+    {% for provider in providers %}
+  		<tr>
+  			<td><a href="provider?PCPID={{ provider.PCPID }}">{{ provider.PCPID}}</a></td>
+  			<td>{{ provider.DOH }}</td>
+  			<td>{{ provider.Name }}</td>
+        <td>{{ provider.SSN }}</td>
+        <td>{{ provider.Specialty }}</td>
+  		</tr>
+    {% endfor %}
+	</table>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Transaction</h1>
+	<form action="/savetransaction" method="POST">
+		Transaction ID:<br>
+		<input type="text" name="TransactionID" value="{{ Transaction.TransactionID }}" /><br><br>
+
+		Date (2020-06-05):<br>
+		<input type="date" name="Date" value="{{ Transaction.Date }}" /><br><br>
+
+		Amount (100.00):<br>
+		<input type="text" name="Amount" value="{{ Transaction.Amount }}" /><br><br>
+
+    Insurance:<br>
+		<input type="text" name="Insurance" value="{{ Transaction.Insurance }}" /><br><br>
+
+    Notes:<br>
+		<input type="text" name="Notes" value="{{ Transaction.Notes }}" /><br><br>
+
+    AdminID:<br>
+    <input type="number" name="AdminID" value="{{ Transaction.AdminID }}" /><br><br>
+
+    PatientID:<br>
+    <input type="text" name="PatientID" value="{{ Transaction.PatientID }}" /><br><br>
+
+    PCPID:<br>
+    <input type="text" name="PCPID" value="{{ Transaction.PCPID }}" /><br><br>
+
+		<br>
+
+		<input type="submit" value="Save Transaction"/>
+
+		</form>
+{% endblock %}
