@@ -16,6 +16,10 @@ SESSION_TYPE = 'filesystem'
 app.config.from_object(__name__)
 Session(app)
 
+@app.route('/')
+def welcome():
+    return render_template('welcome.html', title='Kayshale Ortiz | IS437 Final Project', msg='Welcome!')
+
 @app.route('/set')
 def set():
     session['time'] = time.time()
