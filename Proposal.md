@@ -31,3 +31,8 @@ With my simple application, administrators will be able to:
 * All admins need a username and password in the database to log in
 
 ![Relational Schema](https://github.com/kayshale/FinalProject/blob/master/Schema.png)
+
+# To Start
+
+username = raiza
+passwrd = 1234
